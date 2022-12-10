@@ -20,6 +20,7 @@ let server = createServer((request, response) => {
       let html = createPage(config);
       response.writeHead(200, config.cacheHeaders);
       response.end(html);
+      console.log(`${request.method} ${request.url} ${response.statusCode}`);
       break;
     }
     case "/p1": {
@@ -44,6 +45,7 @@ let server = createServer((request, response) => {
         });
         response.end(html);
       }
+      console.log(`${request.method} ${request.url} ${response.statusCode}`);
       break;
     }
     case "/p2": {
@@ -71,12 +73,15 @@ let server = createServer((request, response) => {
         });
         response.end(html);
       }
+      console.log(`${request.method} ${request.url} ${response.statusCode}`);
       break;
     }
   }
 });
 
-server.listen(3000);
+// 3001 to avoid default 3000 on other tools
+console.log("listening at http://localhost:3001\n");
+server.listen(3001);
 
 function createPage(config) {
   return `
