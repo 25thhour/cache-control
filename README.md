@@ -1,4 +1,4 @@
-# Node Server
+# Cache-Control
 
 A barebones node server for testing `Cache-Control` headers.
 
