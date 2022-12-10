@@ -8,6 +8,7 @@ function md5(html) {
 }
 
 let server = createServer((request, response) => {
+  response.setHeader("content-type", "text/html");
   switch (request.url) {
     case "/": {
       let config = {
