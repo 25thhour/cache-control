@@ -1,0 +1,19 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "A barebones nodejs server for testing Cache-Control behaviour.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": {
+    "name": "James Deane",
+    "email": "25thhour@gmail.com",
+    "url": "https://jwdeane.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
